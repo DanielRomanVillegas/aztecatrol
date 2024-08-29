@@ -10,7 +10,7 @@ export default {
         sentinel: ["Sentinel", "Helvetica"]
       },
       backgroundImage: {
-        'plataforma': "linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0)),url('./plataforma_opt2.webp')"
+        'plataforma': "linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0)),url('./plataforma.webp')"
       },
       transitionProperty: {
         'width': 'width'

@@ -7,5 +7,8 @@ export const useQuery = () => {
   const isLandscapeOnMobile = useMediaQuery({
     query: "(orientation: landscape) and (max-width: 768px)",
   });
-  return { isBigScreen, isLandscapeOnMobile };
+
+  const isPc = () => isBigScreen && !isLandscapeOnMobile;
+
+  return { isPc };
 };
