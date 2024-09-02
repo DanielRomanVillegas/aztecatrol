@@ -1,5 +1,3 @@
-import React from "react";
-
 interface Props {
   letf?: boolean;
 }
@@ -9,7 +7,7 @@ export const Section = ({ letf }: Props) => {
     <section
       className={`flex flex-col-reverse md:${
         letf ? "flex-row" : "flex-row-reverse"
-      } md:justify-between bg-white w-full p-6 `}
+      } md:justify-between w-full py-6 `}
     >
       <div className="md:w-3/6 md:inline-block">
         <h2 className="text-2xl font-bold mb-3 mt-6 md:mt-0">Sobre Nostros</h2>
