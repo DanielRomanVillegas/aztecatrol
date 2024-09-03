@@ -5,18 +5,48 @@ export const HomeView = () => {
   return (
     <div className="p-6 bg-white">
       {/* //*Seccion Sobre nostros */}
-      <Section letf />
+      <Section id="home" title="¿Quiénes somos?">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          maxime ipsa officia quod aliquid cumque dolor, dolorum vel vero rem
+          atque? In tenetur obcaecati tempora velit a rem placeat sed.
+        </p>
+      </Section>
       {/* //*Seccion Nuestros servicios */}
-      <Section />
+      <Section id="about" letf>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          maxime ipsa officia quod aliquid cumque dolor, dolorum vel vero rem
+          atque? In tenetur obcaecati tempora velit a rem placeat sed.
+        </p>
+      </Section>
+      <Section title="¿Quiénes somos?">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          maxime ipsa officia quod aliquid cumque dolor, dolorum vel vero rem
+          atque? In tenetur obcaecati tempora velit a rem placeat sed.
+        </p>
+      </Section>
 
-      <Section letf />
+      <Section letf>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          maxime ipsa officia quod aliquid cumque dolor, dolorum vel vero rem
+          atque? In tenetur obcaecati tempora velit a rem placeat sed.
+        </p>
+      </Section>
 
-      <Section />
-
-      <Section letf />
-      <section className="mt-4">
+      <Section title="¿Quiénes somos?">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          maxime ipsa officia quod aliquid cumque dolor, dolorum vel vero rem
+          atque? In tenetur obcaecati tempora velit a rem placeat sed.
+        </p>
+      </Section>
+      <section className="mt-4 bg-red-700 overflow-hidden">
         <h2 className="text-2xl font-bold">Areas de Competencia</h2>
-        <Carouseltem />
+        <Carousel />
+        {/* <Carouseltem /> */}
       </section>
     </div>
   );

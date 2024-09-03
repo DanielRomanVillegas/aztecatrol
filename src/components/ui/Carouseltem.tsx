@@ -1,9 +1,15 @@
-import React from "react";
+import { useQuery } from "../../hooks";
 
 export const Carouseltem = () => {
+  const { isPc } = useQuery();
+
   return (
-    <div className="bg-green-400 rounded h">
-      <img src="/plataforma.webp" className="rounded" alt="test" />
+    <div className={`overflow-hidden ${isPc() ? "md:h-4/5" : "h-3/4"}`}>
+      <img
+        src="/plataforma.webp"
+        className="rounded h-full w-full "
+        alt="test"
+      />
     </div>
   );
 };

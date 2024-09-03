@@ -21,7 +21,7 @@ export const Header = () => {
 
       <div
         className={`flex flex-col text-white items-center w-fit mx-auto ${
-          isPc() ? "mt-60" : "mt-2"
+          isPc() ? "mt-72" : "mt-2"
         } max-h-[993px]`}
       >
         <h1 className="font-black text-xl  md:text-3xl mb-4">
