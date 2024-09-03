@@ -1,4 +1,4 @@
-import { Carousel } from "../components";
+import { Carousel, Carouseltem } from "../components";
 import { Section } from "../components/ui/Section";
 
 export const HomeView = () => {
@@ -16,7 +16,7 @@ export const HomeView = () => {
       <Section letf />
       <section className="mt-4">
         <h2 className="text-2xl font-bold">Areas de Competencia</h2>
-        <Carousel />
+        <Carouseltem />
       </section>
     </div>
   );

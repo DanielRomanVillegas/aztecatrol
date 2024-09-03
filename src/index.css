@@ -6,3 +6,7 @@
   font-family: "Sentinel";
   src: url("../public/fonts/fonnts.com-Sentinel-Medium.ttf");
 }
+
+.slick-slide > div {
+  margin: 0 10px;
+}

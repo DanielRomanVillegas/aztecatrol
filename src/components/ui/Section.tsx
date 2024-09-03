@@ -6,8 +6,8 @@ export const Section = ({ letf }: Props) => {
   console.log({ letf });
   return (
     <section
-      className={`flex flex-col-reverse md:${
-        !letf ? "flex-row" : "flex-row-reverse"
+      className={`flex flex-col-reverse ${
+        !letf ? "md:flex-row" : "md:flex-row-reverse"
       } md:justify-between w-full py-6 `}
     >
       <div className="md:w-3/6 md:inline-block">

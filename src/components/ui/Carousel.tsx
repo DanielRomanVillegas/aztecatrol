@@ -13,7 +13,10 @@ export const Carousel = () => {
   return (
     <div className="slide-container mb-9">
       <Slider {...settings}>
-        <div className="bg-green-500 rounded-sm p-4 h-60">
+        <div
+          className="bg-green-500 rounded-sm p-4 h-96 w-44"
+          style={{ width: "60%" }}
+        >
           <h3>1</h3>
         </div>
         <div className="bg-green-500 rounded-sm p-4">
