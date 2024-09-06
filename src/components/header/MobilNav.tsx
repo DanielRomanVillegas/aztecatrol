@@ -41,13 +41,21 @@ export const MobilNav = () => {
               Home
             </a>
 
-            <a href="#about">About Us</a>
+            <a href="#about" onClick={handleCloseSidemenu}>
+              About Us
+            </a>
 
-            <a href="#ventajas">Services</a>
+            <a href="#ventajas" onClick={handleCloseSidemenu}>
+              Services
+            </a>
 
-            <a href="#estructura">Testimonials</a>
+            <a href="#estructura" onClick={handleCloseSidemenu}>
+              Testimonials
+            </a>
 
-            <a href="#contact">Contact Us</a>
+            <a href="#contact" onClick={handleCloseSidemenu}>
+              Contact Us
+            </a>
           </nav>
         </div>
       </div>

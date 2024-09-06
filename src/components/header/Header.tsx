@@ -1,6 +1,5 @@
 import { ComputerNav, Logo, MobilNav } from "..";
 import { useQuery } from "../../hooks";
-import bgImage from "../../../public/plataforma.webp";
 
 export const Header = () => {
   const textAndroid = ` Somos líderes en soluciones tecnológicas para el diseño de ingeniería
@@ -11,7 +10,7 @@ export const Header = () => {
     <header className="relative min-h-80 w-full h-1/5 overflow-hidden md:h-screen">
       <img
         loading="eager"
-        src={bgImage}
+        src="/plataforma.webp"
         className="absolute inset-0 w-full h-full brightness-[.30] z-[-1] object-center"
       />
       <div className="md:h-24 h-20 max-w-[1100px] mx-auto flex items-center flex-row justify-between px-3 ">
@@ -21,7 +20,7 @@ export const Header = () => {
 
       <div
         className={`flex flex-col text-white items-center w-fit mx-auto ${
-          isPc() ? "mt-60" : "mt-2"
+          isPc() ? "mt-72" : "mt-2"
         } max-h-[993px]`}
       >
         <h1 className="font-black text-xl  md:text-3xl mb-4">
