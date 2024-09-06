@@ -7,17 +7,24 @@ export const FooterForn = () => {
   };
   return (
     <form action="" onSubmit={handelSubmit}>
-      <div className="flex flex-col md:min-w-96  p-3 space-y-5">
-        <p className="text-lg font-bold">Contact Us</p>
+      <div className="flex flex-col md:min-w-max p-3 space-y-5">
+        <p className="text-lg font-bold">Contactanos</p>
         <input
-          className="text-black p-3 outline-none rounded"
+          className="text-black w-full p-3 mr-4 outline-none rounded-md mb-4"
           type="email"
           name="email"
           id="email"
           placeholder="Email"
         />
         <input
-          className="text-black px-3 pb-16 pt-4 outline-none rounded placeholder:top-20 "
+          className="text-black w-full p-3 mr-4 outline-none rounded-md mb-4"
+          type="name"
+          name="name"
+          id="name"
+          placeholder="Nombre"
+        />
+        <input
+          className="text-black w-full px-3 mr-4 pb-16 pt-4 outline-none rounded-md placeholder:top-20"
           type="text"
           name="menssage"
           id="menssage"
