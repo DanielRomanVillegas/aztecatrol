@@ -7,6 +7,31 @@
   src: url("../public/fonts/fonnts.com-Sentinel-Medium.ttf");
 }
 
+.slick-list,
+.slick-slider,
+.slick-track {
+  padding: 1.5rem 0;
+}
+
+@media screen and (width <= 768px) {
+  .slick-list,
+  .slick-slider,
+  .slick-track {
+    padding: 0rem;
+  }
+}
+
 .slick-slide > div {
-  margin: 0 10px;
+  margin: 0 14px;
+}
+
+.center .slick-center .item {
+  transform: scale(1.1);
+  z-index: 1000000;
+  transition: all 400ms ease-in-out;
+  opacity: 1;
+}
+
+.center .item {
+  opacity: 0.8;
 }

@@ -1,4 +1,4 @@
-import { Carousel, Carouseltem } from "../components";
+import { Carousel } from "../components";
 import { Section } from "../components/ui/Section";
 
 export const HomeView = () => {
@@ -43,9 +43,9 @@ export const HomeView = () => {
           atque? In tenetur obcaecati tempora velit a rem placeat sed.
         </p>
       </Section>
-      <section className="mt-4 bg-red-700 overflow-hidden">
+      <section className="mt-4 overflow-hidden">
         <h2 className="text-2xl font-bold">Areas de Competencia</h2>
-        <Carousel />
+        <Carousel title="Area 1" />
         {/* <Carouseltem /> */}
       </section>
     </div>
