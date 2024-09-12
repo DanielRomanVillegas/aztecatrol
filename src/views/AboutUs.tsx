@@ -12,14 +12,14 @@ export const AboutUs = () => {
         </p>
       </SectionAboutUs>
       {/* //*Seccion Nuestros servicios */}
-      <SectionAboutUs id="about" letf>
+      <SectionAboutUs id="Misión" letf>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
           maxime ipsa officia quod aliquid cumque dolor, dolorum vel vero rem
           atque? In tenetur obcaecati tempora velit a rem placeat sed.
         </p>
       </SectionAboutUs>
-      <SectionAboutUs title="¿Quiénes somos?">
+      <SectionAboutUs title="Visión">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
           maxime ipsa officia quod aliquid cumque dolor, dolorum vel vero rem
