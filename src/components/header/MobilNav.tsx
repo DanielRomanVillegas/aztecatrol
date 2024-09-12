@@ -1,6 +1,8 @@
 import { useState } from "react";
 import MenuIcon from "../ui/MenuIcon";
 import { XMarkIcon } from "@heroicons/react/24/solid";
+import { Link } from "react-router-dom";
+import { routes } from "../../data/inedx";
 
 export const MobilNav = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -37,61 +39,14 @@ export const MobilNav = () => {
             <XMarkIcon className="size-8 text-white " />
           </button>
           <nav className="text-white font-semibold flex px-3 flex-col space-y-8 text-base text-center">
-            <a href="#home" onClick={handleCloseSidemenu}>
-              Home
-            </a>
-
-            <a href="#about" onClick={handleCloseSidemenu}>
-              About Us
-            </a>
-
-            <a href="#ventajas" onClick={handleCloseSidemenu}>
-              Services
-            </a>
-
-            <a href="#estructura" onClick={handleCloseSidemenu}>
-              Testimonials
-            </a>
-
-            <a href="#contact" onClick={handleCloseSidemenu}>
-              Contact Us
-            </a>
+            {routes.map((ruta) => (
+              <Link to={ruta.to} onClick={handleCloseSidemenu}>
+                {ruta.name}
+              </Link>
+            ))}
           </nav>
         </div>
       </div>
     </div>
   );
 };
-
-//  <nav className="flex flex-row-reverse relative w-full">
-//    <button type="button" onClick={handleOPenSidemenu}>
-//      <MenuIcon />
-//    </button>
-//    <div className="flex absolute">
-//      <li
-//        className={`${
-//          openMenu ? "flex" : "hidden "
-//        }text-white w-full m-1 p-5 justify-center`}
-//      ></li>
-//      <li
-//        className={`${
-//          openMenu ? "flex" : "hidden "
-//        }text-white w-full m-1 p-5 justify-center`}
-//      ></li>
-//      <li
-//        className={`${
-//          openMenu ? "flex" : "hidden "
-//        }text-white w-full m-1 p-5 justify-center`}
-//      ></li>
-//      <li
-//        className={`${
-//          openMenu ? "flex" : "hidden "
-//        }text-white w-full m-1 p-5 justify-center`}
-//      ></li>
-//      <li
-//        className={`${
-//          openMenu ? "flex" : "hidden "
-//        }text-white w-full m-1 p-5 justify-center`}
-//      ></li>
-//    </div>
-//  </nav>;

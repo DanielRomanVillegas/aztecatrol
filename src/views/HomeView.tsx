@@ -3,7 +3,7 @@ import { Section } from "../components/ui/Section";
 
 export const HomeView = () => {
   return (
-    <div className="p-6 bg-white">
+    <div className=" bg-white">
       {/* //*Seccion Sobre nostros */}
       <Section id="home" title="¿Quiénes somos?">
         <p>
@@ -28,25 +28,11 @@ export const HomeView = () => {
         </p>
       </Section>
 
-      <Section letf>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-          maxime ipsa officia quod aliquid cumque dolor, dolorum vel vero rem
-          atque? In tenetur obcaecati tempora velit a rem placeat sed.
-        </p>
-      </Section>
-
-      <Section title="¿Quiénes somos?">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-          maxime ipsa officia quod aliquid cumque dolor, dolorum vel vero rem
-          atque? In tenetur obcaecati tempora velit a rem placeat sed.
-        </p>
-      </Section>
-      <section className="mt-4 overflow-hidden">
-        <h2 className="text-2xl font-bold">Areas de Competencia</h2>
+      <section className="overflow-hidden pb-6">
+        <h2 className="mx-6 text-2xl font-bold">Areas de Competencia</h2>
         <Carousel title="Area 1" />
         {/* <Carouseltem /> */}
+        <Carousel />
       </section>
     </div>
   );

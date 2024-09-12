@@ -6,11 +6,22 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'portrait': { 'raw': '(orientation: portrait)' },
+        'landscape': { 'raw': '(orientation: landscape)' },
+      },
       fontFamily: {
         sentinel: ["Sentinel", "Helvetica"]
       },
+      colors: {
+        'b-blue': '#083A59',
+        'l-blue': '#1B70A6',
+        'b-gray': '#4D4B4C',
+        'xl-blue': '#608BA6',
+        'm-w': '#D6D6D6'
+      },
       backgroundImage: {
-        'plataforma': "linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0)),url('./plataforma.webp')"
+        'plataforma': " url('./plataforma.webp')"
       },
       transitionProperty: {
         'width': 'width'
@@ -21,3 +32,4 @@ export default {
 }
 
 //!! linear - gradient(to bottom, rgb(113, 113, 122, 0.2), rgb(0, 0, 0)) Para gradiente
+//!!linear - gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0)),

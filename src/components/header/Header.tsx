@@ -1,52 +1,44 @@
-import { ComputerNav, Logo, MobilNav } from "..";
-import { useQuery } from "../../hooks";
+import { ComputerNav, Logo, MobilNav, WelcomeText } from "..";
+import { usePages, useQuery } from "../../hooks";
+
+//max-h-[993px]
+
+//!Margib vertical del texto en el header
+// ${
+//           isPc() ? "lg:mt-72 md:my-10" : "mt-2"
+//         }
 
 export const Header = () => {
-  const textAndroid = ` Somos líderes en soluciones tecnológicas para el diseño de ingeniería
-          de pozos. Nos especializamos en ofrecer sistemas avanzados que
-          garantizan precisión, seguridad y eficiencia en cada proyecto. `;
+  const { isMainPage, page } = usePages();
   const { isPc } = useQuery();
   return (
-    <header className="relative min-h-80 w-full h-1/5 overflow-hidden md:h-screen">
-      <img
-        loading="eager"
-        src="/plataforma.webp"
-        className="absolute inset-0 w-full h-full brightness-[.30] z-[-1] object-center"
-      />
-      <div className="md:h-24 h-20 max-w-[1100px] mx-auto flex items-center flex-row justify-between px-3 ">
+    <header
+      className={`relative ${
+        !isMainPage && "bg-b-blue"
+      } min-h-[33dvh]  w-full overflow-hidden pb-4 ${
+        isMainPage
+          ? "landscape:h-[70dvh] portrait:h-[33dvh] md:h-[40dvh]  landscape:lg:h-screen"
+          : "landscape:h-[70dvh] portrait:h-[33dvh] md:h-[40dvh] landscape:lg:h-[65dvh]"
+      }`}
+    >
+      {isMainPage && (
+        <img
+          loading="eager"
+          src="/plataforma.webp"
+          className="absolute inset-0 w-full h-full brightness-[.30] z-[-1] object-center"
+        />
+      )}
+      <div className=" max-w-[1100px] mx-auto flex items-center flex-row justify-between px-3">
         <Logo />
         {isPc() ? <ComputerNav /> : <MobilNav />}
       </div>
 
       <div
-        className={`flex flex-col text-white items-center w-fit mx-auto ${
-          isPc() ? "mt-72" : "mt-2"
-        } max-h-[993px]`}
+        style={{
+          height: `calc(100% - 11% - 1.5rem)`,
+        }}
       >
-        <h1 className="font-black text-xl  md:text-3xl mb-4">
-          BIENVENIDO {isPc() ? <br /> : null} AZTECATROL
-        </h1>
-        <p className="max-w-[895px] text-center leading-6 px-4 text-ellipsis">
-          {isPc() ? (
-            <>
-              Somos líderes en soluciones tecnológicas para el diseño de
-              ingeniería de pozos. Nos especializamos en ofrecer sistemas
-              avanzados que garantizan precisión, seguridad y eficiencia en cada
-              proyecto. Con años de experiencia en la industria, nuestro
-              compromiso es brindarte herramientas innovadoras que optimicen tus
-              operaciones y lleven tu proyecto al siguiente nivel. <br />
-              Explora nuestros productos y servicios diseñados para satisfacer
-              las necesidades más exigentes del mercado. En AztecaTrol, la
-              excelencia en ingeniería es nuestra prioridad.
-            </>
-          ) : (
-            <>{textAndroid}</>
-          )}
-        </p>
-        <a href="#">
-          <span>read more</span>
-          <i></i>
-        </a>
+        {isMainPage ? <WelcomeText /> : page?.component}
       </div>
     </header>
   );

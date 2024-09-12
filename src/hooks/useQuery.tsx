@@ -1,14 +1,17 @@
 import { useMediaQuery } from "react-responsive";
 
 export const useQuery = () => {
+  //! Origuinal de isBigScreen "(min-width:768px) and (min-height: 600px)";
   const isBigScreen = useMediaQuery({
-    query: "(min-width:768px) and (min-height: 600px)",
+    query: "(min-width:1024px) and (min-height: 700px)",
   });
   const isLandscapeOnMobile = useMediaQuery({
-    query: "(orientation: landscape) and (max-width: 768px)",
+    query: "(orientation: landscape) and (max-width: 900px)",
   });
 
   const isPc = () => isBigScreen && !isLandscapeOnMobile;
 
-  return { isPc };
+  const test = isPc();
+  console.table({ isLandscapeOnMobile, isBigScreen, test });
+  return { isPc, isLandscapeOnMobile, isBigScreen };
 };

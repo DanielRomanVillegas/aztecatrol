@@ -22,7 +22,7 @@
 }
 
 .slick-slide > div {
-  margin: 0 14px;
+  margin: 0 16px;
 }
 
 .center .slick-center .item {
@@ -34,4 +34,15 @@
 
 .center .item {
   opacity: 0.8;
+}
+/* 
+.slide-container .slick-slider .slick-list .slick-track {
+  height: 100px;
+  width: 100px;
+} */
+
+@media screen and (width <= 900) {
+  .center .item {
+    opacity: 1;
+  }
 }
