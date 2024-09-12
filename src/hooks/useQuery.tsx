@@ -11,7 +11,5 @@ export const useQuery = () => {
 
   const isPc = () => isBigScreen && !isLandscapeOnMobile;
 
-  const test = isPc();
-  console.table({ isLandscapeOnMobile, isBigScreen, test });
   return { isPc, isLandscapeOnMobile, isBigScreen };
 };

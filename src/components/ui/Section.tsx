@@ -4,9 +4,18 @@ interface Props extends PropsWithChildren {
   letf?: boolean;
   title?: string;
   id?: string;
+  button?: boolean;
+  //?imageUrl: string;
+  //?hash: string;
 }
 
-export const Section = ({ letf, title = "lorem", children, id }: Props) => {
+export const Section = ({
+  letf,
+  title = "lorem",
+  children,
+  id,
+  button,
+}: Props) => {
   return (
     //*  md:justify-between antes e cambios
     <section
@@ -24,16 +33,19 @@ export const Section = ({ letf, title = "lorem", children, id }: Props) => {
 
         <div className="mb-7">{children}</div>
 
-        <a className="bg-black text-white p-3 rounded inline w-fit" href="">
-          Saber mas
-        </a>
+        {button && (
+          <a className="bg-black text-white p-3 rounded inline w-fit" href="">
+            Saber mas
+          </a>
+        )}
       </div>
       {/* md:w-2/5 antes ed cambios */}
-      <img
-        className=" md:w-1/2 md:inline-block"
-        src="/plataforma.webp"
-        alt=""
-      />
+      <img className="md:w-1/2 md:inline-block" src="/plataforma.webp" alt="" />
+      {/* <ImageWithBlur
+        className="h-56 md:w-1/2 md:h-96 md:inline-block"
+        src={imageUrl}
+        blurhash={hash}
+      /> */}
     </section>
   );
 };

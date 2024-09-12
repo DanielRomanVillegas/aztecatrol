@@ -14,11 +14,11 @@ export default {
         sentinel: ["Sentinel", "Helvetica"]
       },
       colors: {
-        'b-blue': '#083A59',
+        'b-blue': '#204d69',
         'l-blue': '#1B70A6',
-        'b-gray': '#4D4B4C',
+        'b-gray': '#272626',
         'xl-blue': '#608BA6',
-        'm-w': '#D6D6D6'
+        'white': '#D6D6D6'
       },
       backgroundImage: {
         'plataforma': " url('./plataforma.webp')"

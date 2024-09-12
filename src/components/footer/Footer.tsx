@@ -21,7 +21,7 @@ const sections = [
 
 export const Footer = () => {
   return (
-    <footer className="w-full py-y px-2 bg-black text-white md:flex md:justify-around">
+    <footer className="w-full py-y px-2 bg-b-gray text-white md:flex md:justify-around">
       <div className="max-w-[1240px] mx-auto grid grid-cols-2 md:grid-cols-6 border-b-2 border-gray-600 py-8">
         {sections.map((section, index) => (
           <div key={index} className="mr-6">

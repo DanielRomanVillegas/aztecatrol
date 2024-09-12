@@ -1,4 +1,4 @@
-import { Header } from "../components/about-us";
+import { HeaderAboutUs } from "../components/about-us";
 
 export const routes = [
   {
@@ -9,7 +9,7 @@ export const routes = [
   {
     name: "Conócenos",
     to: "/about-us",
-    component: <Header />,
+    component: <HeaderAboutUs />,
   },
   {
     name: "Servicios",

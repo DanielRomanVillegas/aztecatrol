@@ -4,7 +4,7 @@ import { routes } from "../data/inedx";
 
 export const usePages = () => {
   const location = useLocation();
-  console.log({ location });
+
   const isMainPage = useMemo(
     () => location.pathname === "/",
     [location.pathname]
