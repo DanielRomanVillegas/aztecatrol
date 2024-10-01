@@ -1,14 +1,12 @@
-import { useQuery } from "../../hooks";
+import { ImageWithSpinner } from "..";
 
 export const Carouseltem = () => {
-  const { isPc } = useQuery();
-
   return (
-    <div className={`overflow-hidden ${isPc() ? "" : ""} item`}>
-      <img
+    <div className={`overflow-hidden item rounded`}>
+      <ImageWithSpinner
+        alt="Test"
         src="/plataforma.webp"
-        className="rounded h-full w-full "
-        alt="test"
+        customStyle="rounded h-full w-full"
       />
     </div>
   );

@@ -16,9 +16,10 @@ export default {
       colors: {
         'b-blue': '#204d69',
         'l-blue': '#1B70A6',
+        'l-gray': '#a8a8a8',
         'b-gray': '#272626',
         'xl-blue': '#608BA6',
-        'white': '#D6D6D6'
+        // 'white': '#D6D6D6'
       },
       backgroundImage: {
         'plataforma': " url('./plataforma.webp')"

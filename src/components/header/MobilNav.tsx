@@ -17,7 +17,7 @@ export const MobilNav = () => {
     console.log(openMenu);
   };
   return (
-    <div className=" py-3">
+    <div className=" py-3 z-40 ">
       <button type="button" className="ml-4" onClick={handleOPenSidemenu}>
         <MenuIcon />
       </button>
@@ -26,13 +26,13 @@ export const MobilNav = () => {
         onClick={handleCloseSidemenu}
         className={` ${
           !openMenu && "hidden"
-        } bg-gray-600/50 min-h-screen w-full fixed top-0 left-0 right-0 backdrop-blur-sm`}
+        } bg-gray-600/50 min-h-screen w-full fixed top-0 left-0 right-0 backdrop-blur-sm z-50`}
       ></div>
 
       <div
         className={`${
           openMenu ? "w-2/3" : "w-0"
-        } bg-b-gray min-h-screen fixed top-0 right-0 transition-all duration-300`}
+        } bg-b-gray min-h-screen fixed top-0 right-0 transition-all duration-300 z-50`}
       >
         <div className={`${!openMenu && "hidden"} pt-3`}>
           <button type="button" className="ml-4" onClick={handleCloseSidemenu}>

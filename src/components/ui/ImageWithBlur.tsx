@@ -8,7 +8,7 @@ interface ImageWithBlurProps {
   className?: string; // Clases CSS opcionales
 }
 
-const ImageWithBlur: React.FC<ImageWithBlurProps> = ({
+export const ImageWithBlur: React.FC<ImageWithBlurProps> = ({
   src,
   blurhash,
   alt,
@@ -49,5 +49,3 @@ const ImageWithBlur: React.FC<ImageWithBlurProps> = ({
     </div>
   );
 };
-
-export default ImageWithBlur;

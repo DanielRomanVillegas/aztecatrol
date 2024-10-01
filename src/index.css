@@ -25,6 +25,12 @@
   margin: 0 16px;
 }
 
+@media screen and (orientation: landscape) {
+  .slick-slide > div {
+    padding: 15px;
+  }
+}
+
 .center .slick-center .item {
   transform: scale(1.1);
   z-index: 1000000;

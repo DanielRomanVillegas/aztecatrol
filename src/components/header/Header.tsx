@@ -5,14 +5,18 @@ export const Header = () => {
   const { isMainPage, page } = usePages();
   const { isPc } = useQuery();
 
+  console.log(page);
   return (
     <header
       className={`relative z-10 ${
         !isMainPage && "bg-b-blue"
-      } min-h-[33dvh]  w-full overflow-hidden pb-4 ${
+      } min-h-[27dvh]  w-full overflow-hidden pb-4 ${
         isMainPage
-          ? "landscape:h-[70dvh] portrait:h-[33dvh] md:h-[40dvh]  landscape:lg:h-screen"
-          : "landscape:h-[70dvh] portrait:h-[33dvh] md:h-[40dvh] landscape:lg:h-[70dvh]"
+          ? "landscape:h-[100dvh] portrait:h-[45dvh] md:h-[40dvh] landscape:lg:h-screen"
+          : `landscape:h-[100dvh] portrait:h-[45dvh] md:h-[40dvh] landscape:lg:h-[70dvh] ${
+              page?.to === "/contact" &&
+              "portrait:h-[27dvh] landscape:h-[50dvh] landscape:lg:h-[32dvh]"
+            }`
       }`}
     >
       {isMainPage && (

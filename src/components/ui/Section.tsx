@@ -1,12 +1,14 @@
 import { PropsWithChildren } from "react";
+import { ImageWithSpinner } from "..";
 
 interface Props extends PropsWithChildren {
   letf?: boolean;
   title?: string;
   id?: string;
   button?: boolean;
-  //?imageUrl: string;
-  //?hash: string;
+  imageUrl: string;
+  hash: string;
+  bgColor?: string;
 }
 
 export const Section = ({
@@ -15,6 +17,9 @@ export const Section = ({
   children,
   id,
   button,
+  imageUrl,
+  hash,
+  bgColor = "bg-white",
 }: Props) => {
   return (
     //*  md:justify-between antes e cambios
@@ -22,9 +27,11 @@ export const Section = ({
       id={id}
       className={`flex flex-col-reverse ${
         !letf ? "md:flex-row" : "md:flex-row-reverse"
-      } w-full  `}
+      } w-full `}
     >
-      <div className="flex md:w-1/2 px-5 pb-5 md:p-5 flex-col justify-center">
+      <div
+        className={`${bgColor} flex md:w-1/2 px-5 pb-5 md:p-5 flex-col justify-center`}
+      >
         <h2 className="text-2xl font-bold mb-3 mt-6 md:mt-0">{title}</h2>
         <span className="font-bold mb-5">
           Get full range of premium Industrial services for your business
@@ -40,12 +47,17 @@ export const Section = ({
         )}
       </div>
       {/* md:w-2/5 antes ed cambios */}
-      <img className="md:w-1/2 md:inline-block" src="/plataforma.webp" alt="" />
+      {/* <img className="md:w-1/2 md:inline-block" src="/plataforma.webp" alt="" /> */}
       {/* <ImageWithBlur
-        className="h-56 md:w-1/2 md:h-96 md:inline-block"
+        className="h-56 md:w-1/2 md:h-96"
         src={imageUrl}
         blurhash={hash}
       /> */}
+      <ImageWithSpinner
+        alt="IMagen"
+        src={imageUrl}
+        customStyle="md:w-1/2 md:inline-block"
+      />
     </section>
   );
 };

@@ -1,4 +1,5 @@
 import { PropsWithChildren } from "react";
+import { ImageWithSpinner } from "../../ui/ImageWithSpinner";
 
 interface Props extends PropsWithChildren {
   letf?: boolean;
@@ -6,9 +7,13 @@ interface Props extends PropsWithChildren {
   id?: string;
 }
 
-export const SectionAboutUs = ({ letf, title = "lorem", children, id }: Props) => {
+export const SectionAboutUs = ({
+  letf,
+  title = "lorem",
+  children,
+  id,
+}: Props) => {
   return (
-    //*  md:justify-between antes e cambios
     <section
       id={id}
       className={`flex flex-col-reverse ${
@@ -28,11 +33,10 @@ export const SectionAboutUs = ({ letf, title = "lorem", children, id }: Props) =
           Saber mas
         </a>
       </div>
-      {/* md:w-2/5 antes ed cambios */}
-      <img
-        className=" md:w-1/2 md:inline-block"
+      <ImageWithSpinner
+        alt="IMagen"
         src="/plataforma.webp"
-        alt=""
+        customStyle="md:w-1/2 md:inline-block"
       />
     </section>
   );

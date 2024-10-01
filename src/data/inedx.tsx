@@ -1,4 +1,4 @@
-import { HeaderAboutUs } from "../components/about-us";
+import { HeaderAboutUs, HeaderContactUs, ServiceHeader } from "../components";
 
 export const routes = [
   {
@@ -14,7 +14,7 @@ export const routes = [
   {
     name: "Servicios",
     to: "/services",
-    component: <h1>Nuestros Servicios</h1>,
+    component: <ServiceHeader />,
   },
   {
     name: "Testimonios",
@@ -24,6 +24,6 @@ export const routes = [
   {
     name: "Contáctanos",
     to: "/contact",
-    component: <h1>Contacto</h1>,
+    component: <HeaderContactUs />,
   },
 ];
