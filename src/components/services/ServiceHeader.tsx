@@ -1,3 +1,7 @@
 export const ServiceHeader = () => {
-  return <div>ServiceHeader</div>;
+  return (
+    <div>
+      <h1>Header</h1>
+    </div>
+  );
 };

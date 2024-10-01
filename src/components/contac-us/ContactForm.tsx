@@ -28,7 +28,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <div className=" mx-auto bg-slate-200 shadow p-5 my-7 rounded portrait:md:w-2/3 landscape:md:w-1/2 landscape:lg:w-2/3">
+    <div className=" mx-auto bg-slate-200 shadow p-5 my-7 rounded portrait:md:w-2/3 landscape:md:w-1/2 landscape:lg:w-1/2">
       {error ? <ErrorMessage message="Los campos no pueden ir vacios" /> : null}
       <form ref={form} onSubmit={handelSubmit}>
         <div className="flex flex-col md:min-w-max p-3 space-y-5">
@@ -55,7 +55,7 @@ export const ContactForm = () => {
           />
           <input
             disabled={isSending}
-            className="bg-blue-500 rounded py-3 w-full font-bold hover:bg-blue-700 transition-colors disabled:opacity-65"
+            className="bg-blue-500 rounded py-3 w-full font-bold hover:bg-blue-700 transition-colors disabled:opacity-65 cursor-pointer"
             type="submit"
             value="Enviar"
           />

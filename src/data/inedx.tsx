@@ -1,4 +1,5 @@
-import { HeaderAboutUs, HeaderContactUs, ServiceHeader } from "../components";
+import { HeaderAboutUs, HeaderContactUs } from "../components";
+import { ServiceHeader } from "../components/services/ServiceHeader";
 
 export const routes = [
   {
